@@ -321,17 +321,17 @@ namespace WinFormsStudy {
 			MessageBox::Show("Ошибка ввода. \nПроверьте: поля ввода не должны содержать букв, символов и пробелов.");
 		}
 	}
-	private: System::Void txt1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (this->Text != "") {
+	private: System::Void TextChangeHandler() {
+		if (txt1->Text != "" || txt2->Text != "") {
 			this->lblOper->Text = "";
 			this->txtResult->Text = "";
 		}
 	}
+	private: System::Void txt1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		TextChangeHandler();
+	}
 	private: System::Void txt2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-		if (this->Text != "") {
-			this->lblOper->Text = "";
-			this->txtResult->Text = "";
-		}
+		TextChangeHandler();
 	}
 };
 }
