@@ -265,7 +265,7 @@ namespace WinFormsStudy {
 		this->txt2->Text = L"";
 		this->txtResult->Text = L"";
 	}
-	private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e) {
+ 	private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->lblOper->Text = L"Сложение";
 		CommandHandler("plus"); 
 	}
@@ -283,15 +283,26 @@ namespace WinFormsStudy {
 	}
 	private: System::Void CommandHandler(std::string operand) {
 		double i1, i2, i3;
-		try {
 			if (txt1->Text == "" || txt2->Text == "") {
 				this->lblOper->Text = "";
 				this->txtResult->Text = "";
-				MessageBox::Show("Поля ввода не должны быть пустыми!");
+				MessageBox::Show("Поля ввода не должны быть пустыми", "Calc - Предупреждение", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 				return;
 			}
-			i1 = Convert::ToDouble(txt1->Text->Replace(".", ","));
-			i2 = Convert::ToDouble(txt2->Text->Replace(".", ","));
+			try {
+				i1 = Convert::ToDouble(txt1->Text->Replace(".", ","));
+			}
+			catch (...) {
+				MessageBox::Show("Некорректный ввод в поле 1", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				return;
+			}
+			try {
+				i2 = Convert::ToDouble(txt2->Text->Replace(".", ","));
+			}
+			catch (...) {
+				MessageBox::Show("Некорректный ввод в поле 2", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				return;
+			}
 			if (operand == "plus") {
 				i3 = i1 + i2;
 			}
@@ -303,9 +314,8 @@ namespace WinFormsStudy {
 			}
 			else if (operand == "divide") {
 				if (i2 == 0) {
-					this->lblOper->Text = "";
 					this->txtResult->Text = "";
-					MessageBox::Show("Деление на 0 запрещено");
+					MessageBox::Show("Деление на 0 запрещено", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 					return;
 				}
 				else {
@@ -314,17 +324,27 @@ namespace WinFormsStudy {
 			}
 			this->lblErrors->Text = "";
 			this->txtResult->Text = Convert::ToString(i3);
-		}
-		catch (...) {
-			this->lblOper->Text = "";
-			this->txtResult->Text = "";
-			MessageBox::Show("Ошибка ввода. \nПроверьте: поля ввода не должны содержать букв, символов и пробелов.");
-		}
 	}
 	private: System::Void TextChangeHandler() {
 		if (txt1->Text != "" || txt2->Text != "") {
 			this->lblOper->Text = "";
 			this->txtResult->Text = "";
+		}
+		if (txt1->Text == "," || txt1->Text == ".") {
+			txt1->Text = "0,";
+			txt1->SelectionStart = 2;
+		}
+		if (txt1->Text == "-," || txt1->Text == "-.") {
+			txt1->Text = "-0,";
+			txt1->SelectionStart = 3;
+		}
+		if (txt2->Text == "," || txt2->Text == ".") {
+			txt2->Text = "0,";
+			txt1->SelectionStart = 2;
+		}
+		if (txt2->Text == "-," || txt2->Text == "-.") {
+			txt2->Text = "-0,";
+			txt1->SelectionStart = 3;
 		}
 	}
 	private: System::Void txt1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
