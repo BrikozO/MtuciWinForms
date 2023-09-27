@@ -135,6 +135,7 @@ namespace WinFormsStudy {
 			this->txt1->Size = System::Drawing::Size(90, 22);
 			this->txt1->TabIndex = 4;
 			this->txt1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->txt1->TextChanged += gcnew System::EventHandler(this, &MyForm::txt1_TextChanged);
 			// 
 			// txt2
 			// 
@@ -143,6 +144,7 @@ namespace WinFormsStudy {
 			this->txt2->Size = System::Drawing::Size(90, 22);
 			this->txt2->TabIndex = 5;
 			this->txt2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->txt2->TextChanged += gcnew System::EventHandler(this, &MyForm::txt2_TextChanged);
 			// 
 			// txtResult
 			// 
@@ -282,39 +284,53 @@ namespace WinFormsStudy {
 	private: System::Void CommandHandler(std::string operand) {
 		double i1, i2, i3;
 		try {
-			if (txt1->Text->Contains(".") || txt2->Text->Contains(".")) {
+			if (txt1->Text == "" || txt2->Text == "") {
+				this->lblOper->Text = "";
 				this->txtResult->Text = "";
-				MessageBox::Show("Используйте запятые вместо точек");
+				MessageBox::Show("Поля ввода не должны быть пустыми!");
+				return;
 			}
-			else {
-				i1 = Convert::ToDouble(txt1->Text);
-				i2 = Convert::ToDouble(txt2->Text);
-				if (operand == "plus") {
-					i3 = i1 + i2;
-				}
-				else if (operand == "minus") {
-					i3 = i1 - i2;
-				}
-				else if (operand == "multip") {
-					i3 = i1 * i2;
-				}
-				else if (operand == "divide") {
-					if (i2 == 0) {
-						this->txtResult->Text = "";
-						MessageBox::Show("Деление на 0 запрещено");
-						return;
-					} 
-					else {
-						i3 = i1 / i2;
-					}
-				}
-				this->lblErrors->Text = "";
-				this->txtResult->Text = Convert::ToString(i3);
+			i1 = Convert::ToDouble(txt1->Text->Replace(".", ","));
+			i2 = Convert::ToDouble(txt2->Text->Replace(".", ","));
+			if (operand == "plus") {
+				i3 = i1 + i2;
 			}
+			else if (operand == "minus") {
+				i3 = i1 - i2;
+			}
+			else if (operand == "multip") {
+				i3 = i1 * i2;
+			}
+			else if (operand == "divide") {
+				if (i2 == 0) {
+					this->lblOper->Text = "";
+					this->txtResult->Text = "";
+					MessageBox::Show("Деление на 0 запрещено");
+					return;
+				}
+				else {
+					i3 = i1 / i2;
+				}
+			}
+			this->lblErrors->Text = "";
+			this->txtResult->Text = Convert::ToString(i3);
 		}
 		catch (...) {
+			this->lblOper->Text = "";
 			this->txtResult->Text = "";
-			MessageBox::Show("Ошибка ввода. \nУточните корректность входных данных.");
+			MessageBox::Show("Ошибка ввода. \nПроверьте: поля ввода не должны содержать букв, символов и пробелов.");
+		}
+	}
+	private: System::Void txt1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (this->Text != "") {
+			this->lblOper->Text = "";
+			this->txtResult->Text = "";
+		}
+	}
+	private: System::Void txt2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (this->Text != "") {
+			this->lblOper->Text = "";
+			this->txtResult->Text = "";
 		}
 	}
 };
