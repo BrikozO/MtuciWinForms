@@ -89,9 +89,10 @@ namespace WinFormsStudy {
 			// 
 			// btnClose
 			// 
-			this->btnClose->Location = System::Drawing::Point(240, 185);
+			this->btnClose->Location = System::Drawing::Point(180, 150);
+			this->btnClose->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnClose->Name = L"btnClose";
-			this->btnClose->Size = System::Drawing::Size(100, 30);
+			this->btnClose->Size = System::Drawing::Size(75, 24);
 			this->btnClose->TabIndex = 0;
 			this->btnClose->Text = L"Закрыть";
 			this->btnClose->UseVisualStyleBackColor = true;
@@ -99,9 +100,10 @@ namespace WinFormsStudy {
 			// 
 			// btnReset
 			// 
-			this->btnReset->Location = System::Drawing::Point(240, 150);
+			this->btnReset->Location = System::Drawing::Point(180, 122);
+			this->btnReset->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnReset->Name = L"btnReset";
-			this->btnReset->Size = System::Drawing::Size(100, 30);
+			this->btnReset->Size = System::Drawing::Size(75, 24);
 			this->btnReset->TabIndex = 1;
 			this->btnReset->Text = L"Сброс";
 			this->btnReset->UseVisualStyleBackColor = true;
@@ -109,9 +111,10 @@ namespace WinFormsStudy {
 			// 
 			// btnAdd
 			// 
-			this->btnAdd->Location = System::Drawing::Point(240, 10);
+			this->btnAdd->Location = System::Drawing::Point(180, 8);
+			this->btnAdd->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAdd->Name = L"btnAdd";
-			this->btnAdd->Size = System::Drawing::Size(100, 30);
+			this->btnAdd->Size = System::Drawing::Size(75, 24);
 			this->btnAdd->TabIndex = 2;
 			this->btnAdd->Text = L"Сложить";
 			this->btnAdd->UseVisualStyleBackColor = true;
@@ -122,45 +125,50 @@ namespace WinFormsStudy {
 			this->lblOper->AutoSize = true;
 			this->lblOper->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->lblOper->Location = System::Drawing::Point(110, 10);
+			this->lblOper->Location = System::Drawing::Point(82, 8);
+			this->lblOper->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lblOper->Name = L"lblOper";
-			this->lblOper->Size = System::Drawing::Size(0, 20);
+			this->lblOper->Size = System::Drawing::Size(0, 17);
 			this->lblOper->TabIndex = 3;
 			this->lblOper->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// txt1
 			// 
-			this->txt1->Location = System::Drawing::Point(110, 60);
+			this->txt1->Location = System::Drawing::Point(85, 46);
+			this->txt1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt1->Name = L"txt1";
-			this->txt1->Size = System::Drawing::Size(90, 22);
+			this->txt1->Size = System::Drawing::Size(68, 20);
 			this->txt1->TabIndex = 4;
 			this->txt1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->txt1->TextChanged += gcnew System::EventHandler(this, &MyForm::txt1_TextChanged);
 			// 
 			// txt2
 			// 
-			this->txt2->Location = System::Drawing::Point(110, 90);
+			this->txt2->Location = System::Drawing::Point(85, 70);
+			this->txt2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txt2->Name = L"txt2";
-			this->txt2->Size = System::Drawing::Size(90, 22);
+			this->txt2->Size = System::Drawing::Size(68, 20);
 			this->txt2->TabIndex = 5;
 			this->txt2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			this->txt2->TextChanged += gcnew System::EventHandler(this, &MyForm::txt2_TextChanged);
 			// 
 			// txtResult
 			// 
-			this->txtResult->Location = System::Drawing::Point(110, 120);
+			this->txtResult->Location = System::Drawing::Point(85, 94);
+			this->txtResult->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtResult->Name = L"txtResult";
 			this->txtResult->ReadOnly = true;
-			this->txtResult->Size = System::Drawing::Size(90, 22);
+			this->txtResult->Size = System::Drawing::Size(68, 20);
 			this->txtResult->TabIndex = 6;
 			this->txtResult->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 			// 
 			// lbl1
 			// 
 			this->lbl1->AutoSize = true;
-			this->lbl1->Location = System::Drawing::Point(10, 60);
+			this->lbl1->Location = System::Drawing::Point(8, 49);
+			this->lbl1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl1->Name = L"lbl1";
-			this->lbl1->Size = System::Drawing::Size(102, 16);
+			this->lbl1->Size = System::Drawing::Size(80, 13);
 			this->lbl1->TabIndex = 7;
 			this->lbl1->Text = L"Первое число:";
 			this->lbl1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -168,9 +176,10 @@ namespace WinFormsStudy {
 			// lbl2
 			// 
 			this->lbl2->AutoSize = true;
-			this->lbl2->Location = System::Drawing::Point(10, 90);
+			this->lbl2->Location = System::Drawing::Point(8, 73);
+			this->lbl2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl2->Name = L"lbl2";
-			this->lbl2->Size = System::Drawing::Size(100, 16);
+			this->lbl2->Size = System::Drawing::Size(78, 13);
 			this->lbl2->TabIndex = 8;
 			this->lbl2->Text = L"Второе число:";
 			this->lbl2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -178,18 +187,20 @@ namespace WinFormsStudy {
 			// lblResult
 			// 
 			this->lblResult->AutoSize = true;
-			this->lblResult->Location = System::Drawing::Point(10, 120);
+			this->lblResult->Location = System::Drawing::Point(8, 98);
+			this->lblResult->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lblResult->Name = L"lblResult";
-			this->lblResult->Size = System::Drawing::Size(53, 16);
+			this->lblResult->Size = System::Drawing::Size(44, 13);
 			this->lblResult->TabIndex = 9;
 			this->lblResult->Text = L"Сумма:";
 			this->lblResult->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// btnSubtract
 			// 
-			this->btnSubtract->Location = System::Drawing::Point(240, 45);
+			this->btnSubtract->Location = System::Drawing::Point(180, 37);
+			this->btnSubtract->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnSubtract->Name = L"btnSubtract";
-			this->btnSubtract->Size = System::Drawing::Size(100, 30);
+			this->btnSubtract->Size = System::Drawing::Size(75, 24);
 			this->btnSubtract->TabIndex = 10;
 			this->btnSubtract->Text = L"Вычесть";
 			this->btnSubtract->UseVisualStyleBackColor = true;
@@ -197,9 +208,10 @@ namespace WinFormsStudy {
 			// 
 			// btnMultiply
 			// 
-			this->btnMultiply->Location = System::Drawing::Point(240, 80);
+			this->btnMultiply->Location = System::Drawing::Point(180, 65);
+			this->btnMultiply->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnMultiply->Name = L"btnMultiply";
-			this->btnMultiply->Size = System::Drawing::Size(100, 30);
+			this->btnMultiply->Size = System::Drawing::Size(75, 24);
 			this->btnMultiply->TabIndex = 11;
 			this->btnMultiply->Text = L"Умножить";
 			this->btnMultiply->UseVisualStyleBackColor = true;
@@ -207,9 +219,10 @@ namespace WinFormsStudy {
 			// 
 			// btnDivide
 			// 
-			this->btnDivide->Location = System::Drawing::Point(240, 115);
+			this->btnDivide->Location = System::Drawing::Point(180, 93);
+			this->btnDivide->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnDivide->Name = L"btnDivide";
-			this->btnDivide->Size = System::Drawing::Size(100, 30);
+			this->btnDivide->Size = System::Drawing::Size(75, 24);
 			this->btnDivide->TabIndex = 12;
 			this->btnDivide->Text = L"Разделить";
 			this->btnDivide->UseVisualStyleBackColor = true;
@@ -220,16 +233,17 @@ namespace WinFormsStudy {
 			this->lblErrors->AutoSize = true;
 			this->lblErrors->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->lblErrors->Location = System::Drawing::Point(20, 180);
+			this->lblErrors->Location = System::Drawing::Point(15, 146);
+			this->lblErrors->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lblErrors->Name = L"lblErrors";
-			this->lblErrors->Size = System::Drawing::Size(0, 16);
+			this->lblErrors->Size = System::Drawing::Size(0, 13);
 			this->lblErrors->TabIndex = 13;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(342, 213);
+			this->ClientSize = System::Drawing::Size(256, 173);
 			this->Controls->Add(this->lblErrors);
 			this->Controls->Add(this->btnDivide);
 			this->Controls->Add(this->btnMultiply);
@@ -245,6 +259,7 @@ namespace WinFormsStudy {
 			this->Controls->Add(this->btnReset);
 			this->Controls->Add(this->btnClose);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"Calc";
