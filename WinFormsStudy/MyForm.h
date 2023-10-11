@@ -90,7 +90,7 @@ namespace WinFormsStudy {
 			// btnClose
 			// 
 			this->btnClose->Location = System::Drawing::Point(180, 150);
-			this->btnClose->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnClose->Margin = System::Windows::Forms::Padding(2);
 			this->btnClose->Name = L"btnClose";
 			this->btnClose->Size = System::Drawing::Size(75, 24);
 			this->btnClose->TabIndex = 0;
@@ -101,7 +101,7 @@ namespace WinFormsStudy {
 			// btnReset
 			// 
 			this->btnReset->Location = System::Drawing::Point(180, 122);
-			this->btnReset->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnReset->Margin = System::Windows::Forms::Padding(2);
 			this->btnReset->Name = L"btnReset";
 			this->btnReset->Size = System::Drawing::Size(75, 24);
 			this->btnReset->TabIndex = 1;
@@ -112,7 +112,7 @@ namespace WinFormsStudy {
 			// btnAdd
 			// 
 			this->btnAdd->Location = System::Drawing::Point(180, 8);
-			this->btnAdd->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnAdd->Margin = System::Windows::Forms::Padding(2);
 			this->btnAdd->Name = L"btnAdd";
 			this->btnAdd->Size = System::Drawing::Size(75, 24);
 			this->btnAdd->TabIndex = 2;
@@ -134,8 +134,8 @@ namespace WinFormsStudy {
 			// 
 			// txt1
 			// 
-			this->txt1->Location = System::Drawing::Point(85, 46);
-			this->txt1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txt1->Location = System::Drawing::Point(92, 46);
+			this->txt1->Margin = System::Windows::Forms::Padding(2);
 			this->txt1->Name = L"txt1";
 			this->txt1->Size = System::Drawing::Size(68, 20);
 			this->txt1->TabIndex = 4;
@@ -144,8 +144,8 @@ namespace WinFormsStudy {
 			// 
 			// txt2
 			// 
-			this->txt2->Location = System::Drawing::Point(85, 70);
-			this->txt2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txt2->Location = System::Drawing::Point(92, 70);
+			this->txt2->Margin = System::Windows::Forms::Padding(2);
 			this->txt2->Name = L"txt2";
 			this->txt2->Size = System::Drawing::Size(68, 20);
 			this->txt2->TabIndex = 5;
@@ -154,8 +154,8 @@ namespace WinFormsStudy {
 			// 
 			// txtResult
 			// 
-			this->txtResult->Location = System::Drawing::Point(85, 94);
-			this->txtResult->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->txtResult->Location = System::Drawing::Point(92, 94);
+			this->txtResult->Margin = System::Windows::Forms::Padding(2);
 			this->txtResult->Name = L"txtResult";
 			this->txtResult->ReadOnly = true;
 			this->txtResult->Size = System::Drawing::Size(68, 20);
@@ -198,7 +198,7 @@ namespace WinFormsStudy {
 			// btnSubtract
 			// 
 			this->btnSubtract->Location = System::Drawing::Point(180, 37);
-			this->btnSubtract->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnSubtract->Margin = System::Windows::Forms::Padding(2);
 			this->btnSubtract->Name = L"btnSubtract";
 			this->btnSubtract->Size = System::Drawing::Size(75, 24);
 			this->btnSubtract->TabIndex = 10;
@@ -209,7 +209,7 @@ namespace WinFormsStudy {
 			// btnMultiply
 			// 
 			this->btnMultiply->Location = System::Drawing::Point(180, 65);
-			this->btnMultiply->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnMultiply->Margin = System::Windows::Forms::Padding(2);
 			this->btnMultiply->Name = L"btnMultiply";
 			this->btnMultiply->Size = System::Drawing::Size(75, 24);
 			this->btnMultiply->TabIndex = 11;
@@ -220,7 +220,7 @@ namespace WinFormsStudy {
 			// btnDivide
 			// 
 			this->btnDivide->Location = System::Drawing::Point(180, 93);
-			this->btnDivide->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnDivide->Margin = System::Windows::Forms::Padding(2);
 			this->btnDivide->Name = L"btnDivide";
 			this->btnDivide->Size = System::Drawing::Size(75, 24);
 			this->btnDivide->TabIndex = 12;
@@ -259,7 +259,7 @@ namespace WinFormsStudy {
 			this->Controls->Add(this->btnReset);
 			this->Controls->Add(this->btnClose);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"Calc";

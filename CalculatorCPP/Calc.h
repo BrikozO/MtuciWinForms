@@ -36,27 +36,27 @@ namespace CalculatorCPP {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  buttonDigit0;
-	private: System::Windows::Forms::Button^  buttonDigit8;
-	private: System::Windows::Forms::Button^  buttonDigit7;
-	private: System::Windows::Forms::Button^  buttonDigit6;
-	private: System::Windows::Forms::Button^  buttonDigit5;
-	private: System::Windows::Forms::Button^  buttonDigit4;
-	private: System::Windows::Forms::Button^  buttonDigit3;
-	private: System::Windows::Forms::Button^  buttonDigit1;
-	private: System::Windows::Forms::Button^  buttonDigit2;
-	private: System::Windows::Forms::Button^  buttonDigit9;
-	private: System::Windows::Forms::Button^  buttonDot;
-	private: System::Windows::Forms::Button^  buttonNegative;
-	private: System::Windows::Forms::Button^  buttonMul;
-	private: System::Windows::Forms::Button^  buttonSub;
-	private: System::Windows::Forms::Button^  buttonSum;
-	private: System::Windows::Forms::Button^  buttonResult;
-	private: System::Windows::Forms::Button^  buttonDiv;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::Button^  btnClean;
-	private: System::Windows::Forms::Button^  btnCleanEntry;
-	private: System::Windows::Forms::Button^  btnBackspace;
+	private: System::Windows::Forms::Button^ buttonDigit0;
+	private: System::Windows::Forms::Button^ buttonDigit8;
+	private: System::Windows::Forms::Button^ buttonDigit7;
+	private: System::Windows::Forms::Button^ buttonDigit6;
+	private: System::Windows::Forms::Button^ buttonDigit5;
+	private: System::Windows::Forms::Button^ buttonDigit4;
+	private: System::Windows::Forms::Button^ buttonDigit3;
+	private: System::Windows::Forms::Button^ buttonDigit1;
+	private: System::Windows::Forms::Button^ buttonDigit2;
+	private: System::Windows::Forms::Button^ buttonDigit9;
+	private: System::Windows::Forms::Button^ buttonDot;
+	private: System::Windows::Forms::Button^ buttonNegative;
+	private: System::Windows::Forms::Button^ buttonMul;
+	private: System::Windows::Forms::Button^ buttonSub;
+	private: System::Windows::Forms::Button^ buttonSum;
+	private: System::Windows::Forms::Button^ buttonResult;
+	private: System::Windows::Forms::Button^ buttonDiv;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Button^ btnClean;
+	private: System::Windows::Forms::Button^ btnCleanEntry;
+	private: System::Windows::Forms::Button^ btnBackspace;
 
 
 
@@ -76,7 +76,7 @@ namespace CalculatorCPP {
 		/// <summary>
 		/// Обязательная переменная конструктора.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -115,7 +115,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit0
 			// 
-			this->buttonDigit0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDigit0->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDigit0->Location = System::Drawing::Point(64, 254);
 			this->buttonDigit0->Name = L"buttonDigit0";
@@ -127,8 +127,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit8
 			// 
-			this->buttonDigit8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->buttonDigit8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->buttonDigit8->Location = System::Drawing::Point(64, 131);
 			this->buttonDigit8->Name = L"buttonDigit8";
 			this->buttonDigit8->Size = System::Drawing::Size(45, 35);
@@ -139,8 +138,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit7
 			// 
-			this->buttonDigit7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->buttonDigit7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->buttonDigit7->Location = System::Drawing::Point(13, 131);
 			this->buttonDigit7->Name = L"buttonDigit7";
 			this->buttonDigit7->Size = System::Drawing::Size(45, 35);
@@ -151,7 +149,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit6
 			// 
-			this->buttonDigit6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDigit6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDigit6->Location = System::Drawing::Point(115, 172);
 			this->buttonDigit6->Name = L"buttonDigit6";
@@ -163,8 +161,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit5
 			// 
-			this->buttonDigit5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->buttonDigit5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->buttonDigit5->Location = System::Drawing::Point(64, 172);
 			this->buttonDigit5->Name = L"buttonDigit5";
 			this->buttonDigit5->Size = System::Drawing::Size(45, 35);
@@ -175,8 +172,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit4
 			// 
-			this->buttonDigit4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->buttonDigit4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->buttonDigit4->Location = System::Drawing::Point(13, 172);
 			this->buttonDigit4->Name = L"buttonDigit4";
 			this->buttonDigit4->Size = System::Drawing::Size(45, 35);
@@ -187,7 +183,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit3
 			// 
-			this->buttonDigit3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDigit3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDigit3->Location = System::Drawing::Point(115, 213);
 			this->buttonDigit3->Name = L"buttonDigit3";
@@ -199,7 +195,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit1
 			// 
-			this->buttonDigit1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDigit1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDigit1->Location = System::Drawing::Point(13, 213);
 			this->buttonDigit1->Name = L"buttonDigit1";
@@ -211,7 +207,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit2
 			// 
-			this->buttonDigit2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDigit2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDigit2->Location = System::Drawing::Point(64, 213);
 			this->buttonDigit2->Name = L"buttonDigit2";
@@ -223,8 +219,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDigit9
 			// 
-			this->buttonDigit9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
+			this->buttonDigit9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->buttonDigit9->Location = System::Drawing::Point(115, 131);
 			this->buttonDigit9->Name = L"buttonDigit9";
 			this->buttonDigit9->Size = System::Drawing::Size(45, 35);
@@ -235,7 +230,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDot
 			// 
-			this->buttonDot->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDot->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDot->Location = System::Drawing::Point(115, 254);
 			this->buttonDot->Name = L"buttonDot";
@@ -247,7 +242,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonNegative
 			// 
-			this->buttonNegative->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonNegative->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonNegative->Location = System::Drawing::Point(13, 254);
 			this->buttonNegative->Name = L"buttonNegative";
@@ -259,7 +254,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonMul
 			// 
-			this->buttonMul->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonMul->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonMul->Location = System::Drawing::Point(166, 172);
 			this->buttonMul->Name = L"buttonMul";
@@ -271,7 +266,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonSub
 			// 
-			this->buttonSub->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonSub->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonSub->Location = System::Drawing::Point(166, 213);
 			this->buttonSub->Name = L"buttonSub";
@@ -283,7 +278,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonSum
 			// 
-			this->buttonSum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonSum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonSum->Location = System::Drawing::Point(166, 254);
 			this->buttonSum->Name = L"buttonSum";
@@ -295,7 +290,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonResult
 			// 
-			this->buttonResult->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonResult->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonResult->Location = System::Drawing::Point(217, 254);
 			this->buttonResult->Name = L"buttonResult";
@@ -307,7 +302,7 @@ namespace CalculatorCPP {
 			// 
 			// buttonDiv
 			// 
-			this->buttonDiv->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonDiv->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->buttonDiv->Location = System::Drawing::Point(166, 131);
 			this->buttonDiv->Name = L"buttonDiv";
@@ -319,13 +314,13 @@ namespace CalculatorCPP {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox1->Location = System::Drawing::Point(12, 21);
 			this->textBox1->MaxLength = 10;
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(250, 22);
+			this->textBox1->Size = System::Drawing::Size(250, 23);
 			this->textBox1->TabIndex = 17;
 			this->textBox1->Text = L"0";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -387,18 +382,18 @@ namespace CalculatorCPP {
 			// 
 			// sqr
 			// 
-			this->sqr->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->sqr->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->sqr->Location = System::Drawing::Point(217, 131);
 			this->sqr->Name = L"sqr";
 			this->sqr->Size = System::Drawing::Size(45, 35);
 			this->sqr->TabIndex = 30;
-			this->sqr->Text = L"sqrt";
+			this->sqr->Text = L"√x";
 			this->sqr->UseVisualStyleBackColor = true;
 			this->sqr->Click += gcnew System::EventHandler(this, &Calc::sqr_Click);
 			// 
 			// drob
 			// 
-			this->drob->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->drob->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->drob->Location = System::Drawing::Point(217, 214);
 			this->drob->Name = L"drob";
 			this->drob->Size = System::Drawing::Size(45, 35);
@@ -409,7 +404,7 @@ namespace CalculatorCPP {
 			// 
 			// prcnt
 			// 
-			this->prcnt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9));
+			this->prcnt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
 			this->prcnt->Location = System::Drawing::Point(217, 173);
 			this->prcnt->Name = L"prcnt";
 			this->prcnt->Size = System::Drawing::Size(45, 35);
@@ -460,7 +455,6 @@ namespace CalculatorCPP {
 
 		}
 #pragma endregion
-
 		double firstNum;
 		double secondNum;
 		double result;
@@ -470,14 +464,14 @@ namespace CalculatorCPP {
 		bool flag = false;
 		bool isZeroDivision = false;
 
-	private: System::Void Calc_Load(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void Calc_Load(System::Object^ sender, System::EventArgs^ e)
 	{
-		
+		btnCleanEntry->PerformClick();
 	}
-	private: System::Void buttonDigit(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void buttonDigit(System::Object^ sender, System::EventArgs^ e)
 	{
 		Button^ numbers = safe_cast<Button^>(sender);
-		if (!isResult) 
+		if (!isResult)
 		{
 			if (textBox1->Text == "0")
 			{
@@ -494,8 +488,8 @@ namespace CalculatorCPP {
 			isResult = false;
 		}
 	}
-	
-	private: System::Void ArithmeticOp(System::Object^  sender, System::EventArgs^  e) 
+
+	private: System::Void ArithmeticOp(System::Object^ sender, System::EventArgs^ e)
 	{
 		isZeroDivision = false;
 		Button^ op = safe_cast<Button^>(sender);
@@ -515,19 +509,21 @@ namespace CalculatorCPP {
 			isResult = true;
 		}
 	}
-
-	private: System::Void buttonDot_Click(System::Object^  sender, System::EventArgs^  e)
-	{
+	private: static int click = 0;
+	private: System::Void buttonDot_Click(System::Object^ sender, System::EventArgs^ e)
+	{	
+		
 		if (!textBox1->Text->Contains(","))
 		{
 			textBox1->Text += ",";
 		}
 		if (arithOp != "") {
-
+			textBox1->Text = 0 + ",";
+		
 		}
 	}
 
-	private: System::Void buttonNegative_Click(System::Object^  sender, System::EventArgs^  e)
+	private: System::Void buttonNegative_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (textBox1->Text != "0") {
 
@@ -596,12 +592,12 @@ namespace CalculatorCPP {
 		}
 	}
 
-	private: System::Void buttonResult_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void buttonResult_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		resultHandler();
 	}
 
-	private: System::Void btnClean_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void btnClean_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		textBox1->Text = "0";
 		firstNum = 0;
@@ -611,7 +607,7 @@ namespace CalculatorCPP {
 		isResult = false;
 	}
 
-	private: System::Void btnCleanEntry_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void btnCleanEntry_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		textBox1->Text = "0";
 		arithOp = "";
@@ -621,7 +617,7 @@ namespace CalculatorCPP {
 		textBoxOperation->Text = "";
 	}
 
-	private: System::Void btnBackspace_Click(System::Object^  sender, System::EventArgs^  e) 
+	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (textBox1->Text->Length > 1)
 		{
@@ -632,10 +628,10 @@ namespace CalculatorCPP {
 			textBox1->Text = "0";
 		}
 	}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void sqr_Click(System::Object^ sender, System::EventArgs^ e) 
-	{	
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void sqr_Click(System::Object^ sender, System::EventArgs^ e)
+	{
 		if (!textBox1->Text->Contains("-"))
 		{
 			double num = System::Convert::ToDouble(textBox1->Text);
@@ -646,9 +642,10 @@ private: System::Void sqr_Click(System::Object^ sender, System::EventArgs^ e)
 			MessageBox::Show("Запрещено брать корень от отрицательных чисел!", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
-private: System::Void drob_Click(System::Object^ sender, System::EventArgs^ e) 
+	private: System::Void drob_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		if (textBox1->Text == "0")
+		if (textBox1->Text == "0" || textBox1->Text == "0," || textBox1->Text == "-0,")
+
 		{
 			MessageBox::Show("Деление на 0 запрещено", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;
@@ -657,8 +654,8 @@ private: System::Void drob_Click(System::Object^ sender, System::EventArgs^ e)
 		{
 			double num = System::Convert::ToDouble(textBox1->Text);
 			textBox1->Text = System::Convert::ToString(1 / num);
-	}
-	
+		}
+
 	}
 	private: bool BIMBIMBAMBAM() {
 		if ((arithOp != "")) {
@@ -666,9 +663,28 @@ private: System::Void drob_Click(System::Object^ sender, System::EventArgs^ e)
 		}
 		return false;
 	}
-private: System::Void prcnt_Click(System::Object^ sender, System::EventArgs^ e) 
-	{ 
-
+	private: System::Void prcnt_Click(System::Object^ sender, System::EventArgs^ e)
+	{
+		if (!textBox1->Text->Contains("%"))
+		{
+			
+			double num = System::Convert::ToDouble(textBox1->Text);
+			if (arithOp == "-") {
+				textBox1->Text = System::Convert::ToString(firstNum - ((firstNum / 100) * num));
+			}
+			else if (arithOp == "+") {
+				textBox1->Text = System::Convert::ToString(firstNum + ((firstNum / 100) * num));
+			}
+			else if (arithOp == "*") {
+				textBox1->Text = System::Convert::ToString(firstNum * ((firstNum / 100) * num));
+			}
+			else if (arithOp == "/") {
+				textBox1->Text = System::Convert::ToString(firstNum / ((firstNum / 100) * num));
+			
+			}
+			arithOp = "";
+			textBoxOperation->Text = "";
+		}
 	}
 };
 }
