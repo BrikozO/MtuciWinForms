@@ -473,8 +473,9 @@ namespace CalculatorCPP {
 		Button^ numbers = safe_cast<Button^>(sender);
 		if (!isResult)
 		{
-			if (textBox1->Text == "0")
+			if (textBox1->Text == "0" || textBox1->Text->Contains("е"))
 			{
+				textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
 				textBox1->Text = numbers->Text;
 			}
 			else
@@ -578,7 +579,8 @@ namespace CalculatorCPP {
 				isResult = false;
 				textBoxOperation->Text = "";
 				isZeroDivision = true;
-				MessageBox::Show("Деление на 0 запрещено", "Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+				textBox1->Text = ("Деление на 0 запрещено");
 				return;
 			}
 			else
@@ -639,7 +641,8 @@ namespace CalculatorCPP {
 		}
 		else
 		{
-			MessageBox::Show("Запрещено брать корень от отрицательных чисел!", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			textBox1->Text = ("Запрещено брать корень от отрицательных чисел!");
 		}
 	}
 	private: System::Void drob_Click(System::Object^ sender, System::EventArgs^ e)
@@ -647,7 +650,8 @@ namespace CalculatorCPP {
 		if (textBox1->Text == "0" || textBox1->Text == "0," || textBox1->Text == "-0,")
 
 		{
-			MessageBox::Show("Деление на 0 запрещено", "Calc - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			textBox1->Text = ("Деление на 0 запрещено");
 			return;
 		}
 		else
