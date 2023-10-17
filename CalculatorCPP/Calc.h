@@ -586,15 +586,7 @@ namespace CalculatorCPP {
 		{
 			if (secondNum == 0)
 			{
-				textBox1->Text = "0";
-				arithOp = "";
-				firstNum = 0;
-				secondNum = 0;
-				isResult = false;
-				isZeroDivision = true;
-				isZeroAdded = false;
-				isErrorActive = true;
-				textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+				ClearAllError();
 				textBox1->Text = ("Деление на 0 запрещено");
 				return;
 			}
@@ -618,20 +610,12 @@ namespace CalculatorCPP {
 
 	private: System::Void btnClean_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		textBox1->Text = "0";
-		firstNum = 0;
-		secondNum = 0;
-		arithOp = "";
-		isResult = false;
+		ClearAll();
 	}
 
 	private: System::Void btnCleanEntry_Click(System::Object^ sender, System::EventArgs^ e)
 	{
-		textBox1->Text = "0";
-		arithOp = "";
-		firstNum = 0;
-		secondNum = 0;
-		isResult = false;
+		ClearAll();
 	}
 
 	private: System::Void btnBackspace_Click(System::Object^ sender, System::EventArgs^ e)
@@ -657,15 +641,7 @@ namespace CalculatorCPP {
 			}
 			else
 			{
-				textBox1->Text = "0";
-				arithOp = "";
-				firstNum = 0;
-				secondNum = 0;
-				isResult = false;
-				isZeroDivision = true;
-				isZeroAdded = false;
-				isErrorActive = true;
-				textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+				ClearAllError();
 				textBox1->Text = ("Запрещено - корень от отрицательного числа!");
 			}
 		}
@@ -675,15 +651,7 @@ namespace CalculatorCPP {
 		if (textBox1->Text == "0" || textBox1->Text == "0," || textBox1->Text == "-0,")
 
 		{
-			textBox1->Text = "0";
-			arithOp = "";
-			firstNum = 0;
-			secondNum = 0;
-			isResult = false;
-			isZeroDivision = true;
-			isZeroAdded = false;
-			isErrorActive = true;
-			textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			ClearAllError();
 			textBox1->Text = ("Деление на 0 запрещено");
 			return;
 		}
@@ -696,6 +664,24 @@ namespace CalculatorCPP {
 
 		}
 
+	}
+	private: void ClearAll() {
+		textBox1->Text = "0";
+		arithOp = "";
+		firstNum = 0;
+		secondNum = 0;
+		isResult = false;
+	}
+	private: void ClearAllError() {
+		textBox1->Text = "0";
+		arithOp = "";
+		firstNum = 0;
+		secondNum = 0;
+		isResult = false;
+		isZeroDivision = true;
+		isZeroAdded = false;
+		isErrorActive = true;
+		textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
 	}
 	private: bool BIMBIMBAMBAM() {
 		if ((arithOp != "")) {
