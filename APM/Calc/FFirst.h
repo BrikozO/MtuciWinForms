@@ -310,6 +310,7 @@ namespace Calc {
                 static_cast<System::Byte>(204)));
             this->from->Location = System::Drawing::Point(13, 156);
             this->from->Name = L"from";
+            this->from->ReadOnly = true;
             this->from->Size = System::Drawing::Size(75, 20);
             this->from->TabIndex = 26;
             this->from->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -344,6 +345,7 @@ namespace Calc {
                 static_cast<System::Byte>(204)));
             this->to->Location = System::Drawing::Point(158, 157);
             this->to->Name = L"to";
+            this->to->ReadOnly = true;
             this->to->Size = System::Drawing::Size(90, 20);
             this->to->TabIndex = 29;
             this->to->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
@@ -438,6 +440,9 @@ namespace Calc {
         else {
             sumTo = sumFrom / Convert::ToDouble(this->rate->Text);
         }
+        if (!this->rate->Text->Contains(",")) {
+            this->rate->Text += ",00";
+        }
         this->from->Text = Convert::ToString(sumFrom);
         this->to->Text = Convert::ToString(sumTo);
         return;
@@ -471,7 +476,7 @@ namespace Calc {
         // 98,50
         // 107,20
         if (text2->Length < 1) {
-            errorMessage = L"Курс обмена не должен быть пустой";
+            errorMessage = L"Курс обмена не должен быть пустым";
             this->rate->Text = L"";
             error(errorMessage);
             return false;
@@ -549,17 +554,18 @@ namespace Calc {
         }
     }
     private: System::Void setRate() {
-        if (this->dollarsToRubbles->Checked) {
-            dollarsToRubblesRate = Convert::ToDouble(this->rate->Text);
+        try {
+            if (this->dollarsToRubbles->Checked || this->rubblesToDollars->Checked) {
+                dollarsToRubblesRate = Convert::ToDouble(this->rate->Text);
+                rubblesToDollarsRate = dollarsToRubblesRate;
+            }
+            else if (this->eurosToRubbles->Checked || this->rubblesToEuros->Checked) {
+                eurosToRubblesRate = Convert::ToDouble(this->rate->Text);
+                rubblesToEurosRate = eurosToRubblesRate;
+            }
         }
-        else if (this->rubblesToDollars->Checked) {
-            rubblesToDollarsRate = Convert::ToDouble(this->rate->Text);
-        }
-        else if (this->eurosToRubbles->Checked) {
-            eurosToRubblesRate = Convert::ToDouble(this->rate->Text);
-        }
-        else {
-            rubblesToEurosRate = Convert::ToDouble(this->rate->Text);
+        catch (...) {
+
         }
     }
     };
