@@ -12,7 +12,7 @@ namespace Calc {
     using namespace System::Drawing;
 
     /// <summary>
-    /// РЎРІРѕРґРєР° РґР»СЏ FFirst
+    /// Сводка для FFirst
     /// </summary>
     public ref class FFirst : public System::Windows::Forms::Form
     {
@@ -21,13 +21,13 @@ namespace Calc {
         {
             InitializeComponent();
             //
-            //TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+            //TODO: добавьте код конструктора
             //
         }
 
     protected:
         /// <summary>
-        /// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
+        /// Освободить все используемые ресурсы.
         /// </summary>
         ~FFirst()
         {
@@ -122,14 +122,14 @@ namespace Calc {
 
     private:
         /// <summary>
-        /// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
+        /// Обязательная переменная конструктора.
         /// </summary>
         System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
         /// <summary>
-        /// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
-        /// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         void InitializeComponent(void)
         {
@@ -161,7 +161,7 @@ namespace Calc {
             this->btnClose->Name = L"btnClose";
             this->btnClose->Size = System::Drawing::Size(100, 30);
             this->btnClose->TabIndex = 0;
-            this->btnClose->Text = L"Р—Р°РєСЂС‹С‚СЊ";
+            this->btnClose->Text = L"Закрыть";
             this->btnClose->UseVisualStyleBackColor = true;
             this->btnClose->Click += gcnew System::EventHandler(this, &FFirst::btnClose_Click);
             // 
@@ -173,7 +173,7 @@ namespace Calc {
             this->btnConvert->Name = L"btnConvert";
             this->btnConvert->Size = System::Drawing::Size(120, 30);
             this->btnConvert->TabIndex = 1;
-            this->btnConvert->Text = L"РљРѕРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ";
+            this->btnConvert->Text = L"Конвертировать";
             this->btnConvert->UseVisualStyleBackColor = true;
             this->btnConvert->Click += gcnew System::EventHandler(this, &FFirst::btnConvert_Click);
             // 
@@ -197,7 +197,7 @@ namespace Calc {
             this->lblSum->Name = L"lblSum";
             this->lblSum->Size = System::Drawing::Size(151, 15);
             this->lblSum->TabIndex = 4;
-            this->lblSum->Text = L"РЎСѓРјРјР° РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё:";
+            this->lblSum->Text = L"Сумма для конвертации:";
             this->lblSum->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             // 
             // sum
@@ -219,7 +219,7 @@ namespace Calc {
             this->lblOdds->Name = L"lblOdds";
             this->lblOdds->Size = System::Drawing::Size(114, 13);
             this->lblOdds->TabIndex = 13;
-            this->lblOdds->Text = L"РСЃС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ";
+            this->lblOdds->Text = L"Исходные данные";
             this->lblOdds->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // lblComments
@@ -242,7 +242,7 @@ namespace Calc {
             this->dollarsToRubbles->Size = System::Drawing::Size(113, 17);
             this->dollarsToRubbles->TabIndex = 20;
             this->dollarsToRubbles->TabStop = true;
-            this->dollarsToRubbles->Text = L"Р”РѕР»Р»Р°СЂС‹ РІ СЂСѓР±Р»Рё";
+            this->dollarsToRubbles->Text = L"Доллары в рубли";
             this->dollarsToRubbles->UseVisualStyleBackColor = true;
             this->dollarsToRubbles->CheckedChanged += gcnew System::EventHandler(this, &FFirst::dollarsToRubbles_CheckedChanged);
             // 
@@ -253,7 +253,7 @@ namespace Calc {
             this->rubblesToDollars->Name = L"rubblesToDollars";
             this->rubblesToDollars->Size = System::Drawing::Size(111, 17);
             this->rubblesToDollars->TabIndex = 21;
-            this->rubblesToDollars->Text = L"Р СѓР±Р»Рё РІ РґРѕР»Р»Р°СЂС‹";
+            this->rubblesToDollars->Text = L"Рубли в доллары";
             this->rubblesToDollars->UseVisualStyleBackColor = true;
             this->rubblesToDollars->CheckedChanged += gcnew System::EventHandler(this, &FFirst::rubblesToDollars_CheckedChanged);
             // 
@@ -277,7 +277,7 @@ namespace Calc {
             this->lblRate->Name = L"lblRate";
             this->lblRate->Size = System::Drawing::Size(126, 15);
             this->lblRate->TabIndex = 23;
-            this->lblRate->Text = L"РљСѓСЂСЃ РѕР±РјРµРЅР° (СЂСѓР±./$):";
+            this->lblRate->Text = L"Курс обмена (руб./$):";
             this->lblRate->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             // 
             // lblDirection
@@ -289,7 +289,7 @@ namespace Calc {
             this->lblDirection->Name = L"lblDirection";
             this->lblDirection->Size = System::Drawing::Size(166, 13);
             this->lblDirection->TabIndex = 24;
-            this->lblDirection->Text = L"РќР°РїСЂР°РІР»РµРЅРёРµ РєРѕРЅРІРµСЂС‚Р°С†РёРё";
+            this->lblDirection->Text = L"Направление конвертации";
             this->lblDirection->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // lblResult
@@ -301,7 +301,7 @@ namespace Calc {
             this->lblResult->Name = L"lblResult";
             this->lblResult->Size = System::Drawing::Size(148, 13);
             this->lblResult->TabIndex = 25;
-            this->lblResult->Text = L"Р РµР·СѓР»СЊС‚Р°С‚ РєРѕРЅРІРµСЂС‚Р°С†РёРё";
+            this->lblResult->Text = L"Результат конвертации";
             this->lblResult->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // from
@@ -359,7 +359,7 @@ namespace Calc {
             this->lblTo->Name = L"lblTo";
             this->lblTo->Size = System::Drawing::Size(29, 15);
             this->lblTo->TabIndex = 30;
-            this->lblTo->Text = L"СЂСѓР±.";
+            this->lblTo->Text = L"руб.";
             this->lblTo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             // 
             // eurosToRubbles
@@ -369,7 +369,7 @@ namespace Calc {
             this->eurosToRubbles->Name = L"eurosToRubbles";
             this->eurosToRubbles->Size = System::Drawing::Size(91, 17);
             this->eurosToRubbles->TabIndex = 31;
-            this->eurosToRubbles->Text = L"Р•РІСЂРѕ РІ СЂСѓР±Р»Рё";
+            this->eurosToRubbles->Text = L"Евро в рубли";
             this->eurosToRubbles->UseVisualStyleBackColor = true;
             this->eurosToRubbles->CheckedChanged += gcnew System::EventHandler(this, &FFirst::eurosToRubbles_CheckedChanged);
             // 
@@ -380,7 +380,7 @@ namespace Calc {
             this->rubblesToEuros->Name = L"rubblesToEuros";
             this->rubblesToEuros->Size = System::Drawing::Size(91, 17);
             this->rubblesToEuros->TabIndex = 32;
-            this->rubblesToEuros->Text = L"Р СѓР±Р»Рё РІ РµРІСЂРѕ";
+            this->rubblesToEuros->Text = L"Рубли в евро";
             this->rubblesToEuros->UseVisualStyleBackColor = true;
             this->rubblesToEuros->CheckedChanged += gcnew System::EventHandler(this, &FFirst::rubblesToEuros_CheckedChanged);
             // 
@@ -412,7 +412,7 @@ namespace Calc {
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
             this->MaximizeBox = false;
             this->Name = L"FFirst";
-            this->Text = L"APM РѕРїРµСЂР°С‚РѕСЂР° РѕР±РјРµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р°";
+            this->Text = L"APM оператора обменного пункта";
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -465,7 +465,7 @@ namespace Calc {
                     return false;
                 }
             }
-            errorMessage = L"РЎСѓРјРјР° РЅРµ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№";
+            errorMessage = L"Сумма не должна быть пустой";
             this->sum->Text = L"";
             error(errorMessage);
             return false;
@@ -476,20 +476,20 @@ namespace Calc {
         // 98,50
         // 107,20
         if (text2->Length < 1) {
-            errorMessage = L"РљСѓСЂСЃ РѕР±РјРµРЅР° РЅРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј";
+            errorMessage = L"Курс обмена не должен быть пустым";
             this->rate->Text = L"";
             error(errorMessage);
             return false;
         }
         double d;
         if (!Double::TryParse(text1, d)) {
-            errorMessage = L"РЎСѓРјРјР° РґРѕР»Р¶РЅР° СЏРІР»СЏС‚СЊСЃСЏ С‡РёСЃР»РѕРј";
+            errorMessage = L"Сумма должна являться числом";
             this->sum->Text = L"";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text2, d)) {
-            errorMessage = L"РљСѓСЂСЃ РѕР±РјРµРЅР° РґРѕР»Р¶РµРЅ СЏРІР»СЏС‚СЊСЃСЏ С‡РёСЃР»РѕРј";
+            errorMessage = L"Курс обмена должен являться числом";
             this->rate->Text = L"";
             error(errorMessage);
             return false;
@@ -497,20 +497,20 @@ namespace Calc {
         return true;
     }
     private: System::Void error(System::String^ text) {
-        MessageBox::Show(text, "APM - РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
+        MessageBox::Show(text, "APM - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
     }
     private: System::Void dollarsToRubbles_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-        this->lblRate->Text = L"РљСѓСЂСЃ РѕР±РјРµРЅР° (СЂСѓР±./$):";
+        this->lblRate->Text = L"Курс обмена (руб./$):";
         this->lblFrom->Text = L"$";
-        this->lblTo->Text = L"СЂСѓР±.";
+        this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
         ratesCheck();
         return;
     }
     private: System::Void rubblesToDollars_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-        this->lblRate->Text = L"РљСѓСЂСЃ РѕР±РјРµРЅР° (СЂСѓР±./$):";
-        this->lblFrom->Text = L"СЂСѓР±.";
+        this->lblRate->Text = L"Курс обмена (руб./$):";
+        this->lblFrom->Text = L"руб.";
         this->lblTo->Text = L"$";
         this->from->Text = L"";
         this->to->Text = L"";
@@ -518,18 +518,18 @@ namespace Calc {
         return;
     }
     private: System::Void eurosToRubbles_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-        this->lblRate->Text = L"РљСѓСЂСЃ РѕР±РјРµРЅР° (СЂСѓР±./в‚¬):";
-        this->lblFrom->Text = L"в‚¬";
-        this->lblTo->Text = L"СЂСѓР±.";
+        this->lblRate->Text = L"Курс обмена (руб./€):";
+        this->lblFrom->Text = L"€";
+        this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
         ratesCheck();
         return;
     }
     private: System::Void rubblesToEuros_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-        this->lblRate->Text = L"РљСѓСЂСЃ РѕР±РјРµРЅР° (СЂСѓР±./в‚¬):";
-        this->lblFrom->Text = L"СЂСѓР±.";
-        this->lblTo->Text = L"в‚¬";
+        this->lblRate->Text = L"Курс обмена (руб./€):";
+        this->lblFrom->Text = L"руб.";
+        this->lblTo->Text = L"€";
         this->from->Text = L"";
         this->to->Text = L"";
         ratesCheck();
