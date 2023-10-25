@@ -12,7 +12,7 @@ namespace Calc {
     using namespace System::Drawing;
 
     /// <summary>
-    /// РЎРІРѕРґРєР° РґР»СЏ FFirst
+    /// Сводка для FFirst
     /// </summary>
     public ref class FFirst : public System::Windows::Forms::Form
     {
@@ -21,13 +21,13 @@ namespace Calc {
         {
             InitializeComponent();
             //
-            //TODO: РґРѕР±Р°РІСЊС‚Рµ РєРѕРґ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°
+            //TODO: добавьте код конструктора
             //
         }
 
     protected:
         /// <summary>
-        /// РћСЃРІРѕР±РѕРґРёС‚СЊ РІСЃРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ СЂРµСЃСѓСЂСЃС‹.
+        /// Освободить все используемые ресурсы.
         /// </summary>
         ~FFirst()
         {
@@ -81,14 +81,14 @@ namespace Calc {
 
     private:
         /// <summary>
-        /// РћР±СЏР·Р°С‚РµР»СЊРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°.
+        /// Обязательная переменная конструктора.
         /// </summary>
         System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
         /// <summary>
-        /// РўСЂРµР±СѓРµРјС‹Р№ РјРµС‚РѕРґ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° вЂ” РЅРµ РёР·РјРµРЅСЏР№С‚Рµ 
-        /// СЃРѕРґРµСЂР¶РёРјРѕРµ СЌС‚РѕРіРѕ РјРµС‚РѕРґР° СЃ РїРѕРјРѕС‰СЊСЋ СЂРµРґР°РєС‚РѕСЂР° РєРѕРґР°.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         void InitializeComponent(void)
         {
@@ -113,11 +113,12 @@ namespace Calc {
             // 
             // btnClose
             // 
-            this->btnClose->Location = System::Drawing::Point(322, 169);
+            this->btnClose->Location = System::Drawing::Point(429, 208);
+            this->btnClose->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->btnClose->Name = L"btnClose";
-            this->btnClose->Size = System::Drawing::Size(100, 30);
+            this->btnClose->Size = System::Drawing::Size(133, 37);
             this->btnClose->TabIndex = 0;
-            this->btnClose->Text = L"Р—Р°РєСЂС‹С‚СЊ";
+            this->btnClose->Text = L"Закрыть";
             this->btnClose->UseVisualStyleBackColor = true;
             this->btnClose->Click += gcnew System::EventHandler(this, &FFirst::btnClose_Click);
             // 
@@ -125,21 +126,23 @@ namespace Calc {
             // 
             this->btnSolve->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->btnSolve->Location = System::Drawing::Point(170, 169);
+            this->btnSolve->Location = System::Drawing::Point(227, 208);
+            this->btnSolve->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->btnSolve->Name = L"btnSolve";
-            this->btnSolve->Size = System::Drawing::Size(100, 30);
+            this->btnSolve->Size = System::Drawing::Size(133, 37);
             this->btnSolve->TabIndex = 1;
-            this->btnSolve->Text = L"Р РµС€РёС‚СЊ";
+            this->btnSolve->Text = L"Решить";
             this->btnSolve->UseVisualStyleBackColor = true;
             this->btnSolve->Click += gcnew System::EventHandler(this, &FFirst::btnSolve_Click);
             // 
             // btnReset
             // 
-            this->btnReset->Location = System::Drawing::Point(10, 169);
+            this->btnReset->Location = System::Drawing::Point(13, 208);
+            this->btnReset->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->btnReset->Name = L"btnReset";
-            this->btnReset->Size = System::Drawing::Size(100, 30);
+            this->btnReset->Size = System::Drawing::Size(133, 37);
             this->btnReset->TabIndex = 2;
-            this->btnReset->Text = L"РЎР±СЂРѕСЃ";
+            this->btnReset->Text = L"Сброс";
             this->btnReset->UseVisualStyleBackColor = true;
             this->btnReset->Click += gcnew System::EventHandler(this, &FFirst::btnReset_Click);
             // 
@@ -148,9 +151,10 @@ namespace Calc {
             this->lblOper->AutoSize = true;
             this->lblOper->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblOper->Location = System::Drawing::Point(110, 10);
+            this->lblOper->Location = System::Drawing::Point(147, 12);
+            this->lblOper->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblOper->Name = L"lblOper";
-            this->lblOper->Size = System::Drawing::Size(0, 17);
+            this->lblOper->Size = System::Drawing::Size(0, 20);
             this->lblOper->TabIndex = 3;
             this->lblOper->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
@@ -159,9 +163,10 @@ namespace Calc {
             this->lblA->AutoSize = true;
             this->lblA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblA->Location = System::Drawing::Point(15, 60);
+            this->lblA->Location = System::Drawing::Point(20, 74);
+            this->lblA->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblA->Name = L"lblA";
-            this->lblA->Size = System::Drawing::Size(24, 15);
+            this->lblA->Size = System::Drawing::Size(29, 18);
             this->lblA->TabIndex = 4;
             this->lblA->Text = L"a =";
             this->lblA->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -171,9 +176,10 @@ namespace Calc {
             this->lblB->AutoSize = true;
             this->lblB->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblB->Location = System::Drawing::Point(15, 90);
+            this->lblB->Location = System::Drawing::Point(20, 111);
+            this->lblB->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblB->Name = L"lblB";
-            this->lblB->Size = System::Drawing::Size(24, 15);
+            this->lblB->Size = System::Drawing::Size(29, 18);
             this->lblB->TabIndex = 5;
             this->lblB->Text = L"b =";
             this->lblB->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -183,9 +189,10 @@ namespace Calc {
             this->lblC->AutoSize = true;
             this->lblC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblC->Location = System::Drawing::Point(15, 120);
+            this->lblC->Location = System::Drawing::Point(20, 148);
+            this->lblC->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblC->Name = L"lblC";
-            this->lblC->Size = System::Drawing::Size(23, 15);
+            this->lblC->Size = System::Drawing::Size(29, 18);
             this->lblC->TabIndex = 6;
             this->lblC->Text = L"c =";
             this->lblC->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -194,9 +201,10 @@ namespace Calc {
             // 
             this->a->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->a->Location = System::Drawing::Point(40, 60);
+            this->a->Location = System::Drawing::Point(53, 74);
+            this->a->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->a->Name = L"a";
-            this->a->Size = System::Drawing::Size(90, 20);
+            this->a->Size = System::Drawing::Size(119, 23);
             this->a->TabIndex = 7;
             this->a->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -204,9 +212,10 @@ namespace Calc {
             // 
             this->b->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->b->Location = System::Drawing::Point(40, 90);
+            this->b->Location = System::Drawing::Point(53, 111);
+            this->b->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->b->Name = L"b";
-            this->b->Size = System::Drawing::Size(90, 20);
+            this->b->Size = System::Drawing::Size(119, 23);
             this->b->TabIndex = 8;
             this->b->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -214,9 +223,10 @@ namespace Calc {
             // 
             this->c->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->c->Location = System::Drawing::Point(40, 119);
+            this->c->Location = System::Drawing::Point(53, 146);
+            this->c->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->c->Name = L"c";
-            this->c->Size = System::Drawing::Size(90, 20);
+            this->c->Size = System::Drawing::Size(119, 23);
             this->c->TabIndex = 9;
             this->c->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -225,11 +235,12 @@ namespace Calc {
             this->lblOdds->AutoSize = true;
             this->lblOdds->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblOdds->Location = System::Drawing::Point(35, 10);
+            this->lblOdds->Location = System::Drawing::Point(47, 12);
+            this->lblOdds->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblOdds->Name = L"lblOdds";
-            this->lblOdds->Size = System::Drawing::Size(113, 30);
+            this->lblOdds->Size = System::Drawing::Size(131, 36);
             this->lblOdds->TabIndex = 13;
-            this->lblOdds->Text = L"РљРѕСЌС„С„РёС†РёРµРЅС‚С‹\r\nСѓСЂР°РІРЅРµРЅРёСЏ";
+            this->lblOdds->Text = L"Коэффициенты\r\nуравнения";
             this->lblOdds->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // lblX1
@@ -237,9 +248,10 @@ namespace Calc {
             this->lblX1->AutoSize = true;
             this->lblX1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblX1->Location = System::Drawing::Point(150, 60);
+            this->lblX1->Location = System::Drawing::Point(200, 74);
+            this->lblX1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblX1->Name = L"lblX1";
-            this->lblX1->Size = System::Drawing::Size(30, 15);
+            this->lblX1->Size = System::Drawing::Size(36, 18);
             this->lblX1->TabIndex = 14;
             this->lblX1->Text = L"x1 =";
             this->lblX1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -249,9 +261,10 @@ namespace Calc {
             this->lblX2->AutoSize = true;
             this->lblX2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblX2->Location = System::Drawing::Point(285, 60);
+            this->lblX2->Location = System::Drawing::Point(380, 74);
+            this->lblX2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblX2->Name = L"lblX2";
-            this->lblX2->Size = System::Drawing::Size(30, 15);
+            this->lblX2->Size = System::Drawing::Size(36, 18);
             this->lblX2->TabIndex = 15;
             this->lblX2->Text = L"x2 =";
             this->lblX2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -260,9 +273,11 @@ namespace Calc {
             // 
             this->x1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->x1->Location = System::Drawing::Point(180, 59);
+            this->x1->Location = System::Drawing::Point(240, 73);
+            this->x1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->x1->Name = L"x1";
-            this->x1->Size = System::Drawing::Size(90, 20);
+            this->x1->ReadOnly = true;
+            this->x1->Size = System::Drawing::Size(119, 23);
             this->x1->TabIndex = 16;
             this->x1->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -270,9 +285,11 @@ namespace Calc {
             // 
             this->x2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->x2->Location = System::Drawing::Point(315, 59);
+            this->x2->Location = System::Drawing::Point(420, 73);
+            this->x2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->x2->Name = L"x2";
-            this->x2->Size = System::Drawing::Size(90, 20);
+            this->x2->ReadOnly = true;
+            this->x2->Size = System::Drawing::Size(119, 23);
             this->x2->TabIndex = 17;
             this->x2->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -281,11 +298,12 @@ namespace Calc {
             this->lblRoots->AutoSize = true;
             this->lblRoots->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblRoots->Location = System::Drawing::Point(235, 18);
+            this->lblRoots->Location = System::Drawing::Point(313, 22);
+            this->lblRoots->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblRoots->Name = L"lblRoots";
-            this->lblRoots->Size = System::Drawing::Size(122, 15);
+            this->lblRoots->Size = System::Drawing::Size(141, 18);
             this->lblRoots->TabIndex = 18;
-            this->lblRoots->Text = L"РљРѕСЂРЅРё СѓСЂР°РІРЅРµРЅРёСЏ";
+            this->lblRoots->Text = L"Корни уравнения";
             this->lblRoots->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // lblComments
@@ -293,17 +311,18 @@ namespace Calc {
             this->lblComments->AutoSize = true;
             this->lblComments->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblComments->Location = System::Drawing::Point(177, 109);
+            this->lblComments->Location = System::Drawing::Point(236, 134);
+            this->lblComments->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblComments->Name = L"lblComments";
-            this->lblComments->Size = System::Drawing::Size(0, 15);
+            this->lblComments->Size = System::Drawing::Size(0, 18);
             this->lblComments->TabIndex = 19;
             this->lblComments->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
             // FFirst
             // 
-            this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+            this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->ClientSize = System::Drawing::Size(434, 211);
+            this->ClientSize = System::Drawing::Size(579, 260);
             this->Controls->Add(this->lblComments);
             this->Controls->Add(this->lblRoots);
             this->Controls->Add(this->x2);
@@ -322,9 +341,10 @@ namespace Calc {
             this->Controls->Add(this->btnSolve);
             this->Controls->Add(this->btnClose);
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+            this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
             this->MaximizeBox = false;
             this->Name = L"FFirst";
-            this->Text = L"Р РµС€РµРЅРёРµ РєРІР°РґСЂР°С‚РЅРѕРіРѕ СѓСЂР°РІРЅРµРЅРёСЏ";
+            this->Text = L"Решение квадратного уравнения";
             this->ResumeLayout(false);
             this->PerformLayout();
 
@@ -348,28 +368,28 @@ namespace Calc {
         if (a == 0) {
             if (b == 0) {
                 if (c == 0.0) {
-                    this->lblComments->Text = Convert::ToString(L"0 = 0. Р’РµСЂРЅРѕРµ СЂР°РІРµРЅСЃС‚РІРѕ.");
+                    this->lblComments->Text = Convert::ToString(L"0 = 0. Верное равенство.");
                 }
                 else {
-                    this->lblComments->Text = Convert::ToString(c + L" = 0. РќРµРІРµСЂРЅРѕРµ СЂР°РІРµРЅСЃС‚РІРѕ.");
+                    this->lblComments->Text = Convert::ToString(c + L" = 0. Неверное равенство.");
                 }
                 return;
             }
             double x = -c / b;
             this->x1->Text = Convert::ToString(x);
-            this->lblComments->Text = Convert::ToString(L"Р›РёРЅРµР№РЅРѕРµ СѓСЂР°РІРЅРµРЅРёРµ.\nРРјРµРµС‚ РѕРґРёРЅ РєРѕСЂРµРЅСЊ.");
+            this->lblComments->Text = Convert::ToString(L"Линейное уравнение.\nИмеет один корень.");
             return;
         }
 
         if (b == 0) {
             if (c == 0) {
                 this->x1->Text = Convert::ToString(L"0");
-                this->lblComments->Text = Convert::ToString(L"Р›РёРЅРµР№РЅРѕРµ СѓСЂР°РІРЅРµРЅРёРµ.\nРРјРµРµС‚ РѕРґРёРЅ РєРѕСЂРµРЅСЊ.");
+                this->lblComments->Text = Convert::ToString(L"Линейное уравнение.\nИмеет один корень.");
                 return;
             }
             double difference = -c / a;
             if (difference < 0) {
-                this->lblComments->Text = Convert::ToString(L"x^2 = " + -c + " / " + a + ".\nРЈСЂР°РІРЅРµРЅРёРµ РЅРµ РёРјРµРµС‚\nРґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РєРѕСЂРЅРµР№.");
+                this->lblComments->Text = Convert::ToString(L"x^2 = " + -c + " / " + a + ".\nУравнение не имеет\nдействительных корней.");
                 return;
             }
             else {
@@ -377,7 +397,7 @@ namespace Calc {
                 double x2 = sqrt(difference);
                 this->x1->Text = Convert::ToString(x1);
                 this->x2->Text = Convert::ToString(x2);
-                this->lblComments->Text = Convert::ToString(L"x^2 = " + -c + " / " + a + ".\nРЈСЂР°РІРЅРµРЅРёРµ РёРјРµРµС‚ РґРІР° РєРѕСЂРЅСЏ.");
+                this->lblComments->Text = Convert::ToString(L"x^2 = " + -c + " / " + a + ".\nУравнение имеет два корня.");
             }
         }
 
@@ -387,16 +407,16 @@ namespace Calc {
             double x2 = (-b + sqrt(discriminant)) / (2 * a);
             this->x1->Text = Convert::ToString(x1);
             this->x2->Text = Convert::ToString(x2);
-            this->lblComments->Text = Convert::ToString(L"Р”РёСЃРєСЂРёРјРёРЅР°РЅС‚ > 0. РЈСЂР°РІРЅРµРЅРёРµ\nРёРјРµРµС‚ РґРІР° РєРѕСЂРЅСЏ.");
+            this->lblComments->Text = Convert::ToString(L"Дискриминант > 0. Уравнение\nимеет два корня.");
         }
         else if (discriminant == 0) {
             double x = -b / (2 * a);
             this->x1->Text = Convert::ToString(x);
             this->x2->Text = Convert::ToString(x);
-            this->lblComments->Text = Convert::ToString(L"Р”РёСЃРєСЂРёРјРёРЅР°РЅС‚ = 0. РЈСЂР°РІРЅРµРЅРёРµ\nРёРјРµРµС‚ РґРІР° РѕРґРёРЅР°РєРѕРІС‹С… РєРѕСЂРЅСЏ.");
+            this->lblComments->Text = Convert::ToString(L"Дискриминант = 0. Уравнение\nимеет два одинаковых корня.");
         }
         else {
-            this->lblComments->Text = Convert::ToString(L"Р”РёСЃРєСЂРёРјРёРЅР°РЅС‚ < 0. РЈСЂР°РІРЅРµРЅРёРµ\nРЅРµ РёРјРµРµС‚ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅС‹С… РєРѕСЂРЅРµР№.");
+            this->lblComments->Text = Convert::ToString(L"Дискриминант < 0. Уравнение\nне имеет действительных корней.");
         }
     }
     private: System::Void btnReset_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -413,38 +433,38 @@ namespace Calc {
         this->lblComments->Text = L"";
         System::String^ errorMessage;
         if (text1->Length < 1) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ A РЅРµ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№";
+            errorMessage = L"Переменная A не должна быть пустой";
             this->a->Text = L"";
             error(errorMessage);
             return false;
         }
         if (text2->Length < 1) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ B РЅРµ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№";
+            errorMessage = L"Переменная B не должна быть пустой";
             this->b->Text = L"";
             error(errorMessage);
             return false;
         }
         if (text3->Length < 1) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ C РЅРµ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСѓСЃС‚РѕР№";
+            errorMessage = L"Переменная C не должна быть пустой";
             this->c->Text = L"";
             error(errorMessage);
             return false;
         }
         double d;
         if (!Double::TryParse(text1, d)) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ A РґРѕР»Р¶РЅРѕ СЏРІР»СЏС‚СЊСЃСЏ С‡РёСЃР»РѕРј";
+            errorMessage = L"Переменная A должно являться числом";
             this->a->Text = L"";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text2, d)) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ B РґРѕР»Р¶РЅРѕ СЏРІР»СЏС‚СЊСЃСЏ С‡РёСЃР»РѕРј";
+            errorMessage = L"Переменная B должно являться числом";
             this->b->Text = L"";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text3, d)) {
-            errorMessage = L"РџРµСЂРµРјРµРЅРЅР°СЏ C РґРѕР»Р¶РЅРѕ СЏРІР»СЏС‚СЊСЃСЏ С‡РёСЃР»РѕРј";
+            errorMessage = L"Переменная C должно являться числом";
             this->c->Text = L"";
             error(errorMessage);
             return false;
@@ -461,7 +481,7 @@ namespace Calc {
         return true;
     }
     private: System::Void error(System::String^ text) {
-        MessageBox::Show(text, "РљРІР°РґСЂР°С‚РЅС‹Рµ СѓСЂР°РІРЅРµРЅРёСЏ - РћС€РёР±РєР°", MessageBoxButtons::OK, MessageBoxIcon::Error);
+        MessageBox::Show(text, "Квадратные уравнения - Ошибка", MessageBoxButtons::OK, MessageBoxIcon::Error);
     }
     };
 }
