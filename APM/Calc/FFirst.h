@@ -94,10 +94,10 @@ namespace Calc {
     private: System::Windows::Forms::RadioButton^ rubblesToEuros;
 
 
-    private: System::Double dollarsToRubblesRate;
-    private: System::Double rubblesToDollarsRate;
-    private: System::Double eurosToRubblesRate;
-    private: System::Double rubblesToEurosRate;
+    private: System::Double dollarsToRubblesRate = 0;
+    private: System::Double rubblesToDollarsRate = 0;
+    private: System::Double eurosToRubblesRate = 0;
+    private: System::Double rubblesToEurosRate = 0;
 
 
 
@@ -157,9 +157,10 @@ namespace Calc {
             // 
             // btnClose
             // 
-            this->btnClose->Location = System::Drawing::Point(355, 178);
+            this->btnClose->Location = System::Drawing::Point(473, 219);
+            this->btnClose->Margin = System::Windows::Forms::Padding(4);
             this->btnClose->Name = L"btnClose";
-            this->btnClose->Size = System::Drawing::Size(100, 30);
+            this->btnClose->Size = System::Drawing::Size(133, 37);
             this->btnClose->TabIndex = 0;
             this->btnClose->Text = L"Закрыть";
             this->btnClose->UseVisualStyleBackColor = true;
@@ -169,9 +170,10 @@ namespace Calc {
             // 
             this->btnConvert->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->btnConvert->Location = System::Drawing::Point(335, 142);
+            this->btnConvert->Location = System::Drawing::Point(447, 175);
+            this->btnConvert->Margin = System::Windows::Forms::Padding(4);
             this->btnConvert->Name = L"btnConvert";
-            this->btnConvert->Size = System::Drawing::Size(120, 30);
+            this->btnConvert->Size = System::Drawing::Size(160, 37);
             this->btnConvert->TabIndex = 1;
             this->btnConvert->Text = L"Конвертировать";
             this->btnConvert->UseVisualStyleBackColor = true;
@@ -182,9 +184,10 @@ namespace Calc {
             this->lblOper->AutoSize = true;
             this->lblOper->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblOper->Location = System::Drawing::Point(110, 10);
+            this->lblOper->Location = System::Drawing::Point(147, 12);
+            this->lblOper->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblOper->Name = L"lblOper";
-            this->lblOper->Size = System::Drawing::Size(0, 17);
+            this->lblOper->Size = System::Drawing::Size(0, 20);
             this->lblOper->TabIndex = 3;
             this->lblOper->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
@@ -193,9 +196,10 @@ namespace Calc {
             this->lblSum->AutoSize = true;
             this->lblSum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblSum->Location = System::Drawing::Point(12, 39);
+            this->lblSum->Location = System::Drawing::Point(16, 48);
+            this->lblSum->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblSum->Name = L"lblSum";
-            this->lblSum->Size = System::Drawing::Size(151, 15);
+            this->lblSum->Size = System::Drawing::Size(182, 18);
             this->lblSum->TabIndex = 4;
             this->lblSum->Text = L"Сумма для конвертации:";
             this->lblSum->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -204,20 +208,23 @@ namespace Calc {
             // 
             this->sum->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->sum->Location = System::Drawing::Point(169, 38);
+            this->sum->Location = System::Drawing::Point(225, 47);
+            this->sum->Margin = System::Windows::Forms::Padding(4);
             this->sum->Name = L"sum";
-            this->sum->Size = System::Drawing::Size(90, 20);
+            this->sum->Size = System::Drawing::Size(119, 23);
             this->sum->TabIndex = 7;
             this->sum->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+            this->sum->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &FFirst::sum_KeyPress);
             // 
             // lblOdds
             // 
             this->lblOdds->AutoSize = true;
             this->lblOdds->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblOdds->Location = System::Drawing::Point(37, 12);
+            this->lblOdds->Location = System::Drawing::Point(49, 15);
+            this->lblOdds->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblOdds->Name = L"lblOdds";
-            this->lblOdds->Size = System::Drawing::Size(114, 13);
+            this->lblOdds->Size = System::Drawing::Size(142, 17);
             this->lblOdds->TabIndex = 13;
             this->lblOdds->Text = L"Исходные данные";
             this->lblOdds->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -227,9 +234,10 @@ namespace Calc {
             this->lblComments->AutoSize = true;
             this->lblComments->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblComments->Location = System::Drawing::Point(177, 109);
+            this->lblComments->Location = System::Drawing::Point(236, 134);
+            this->lblComments->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblComments->Name = L"lblComments";
-            this->lblComments->Size = System::Drawing::Size(0, 15);
+            this->lblComments->Size = System::Drawing::Size(0, 18);
             this->lblComments->TabIndex = 19;
             this->lblComments->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
             // 
@@ -237,9 +245,10 @@ namespace Calc {
             // 
             this->dollarsToRubbles->AutoSize = true;
             this->dollarsToRubbles->Checked = true;
-            this->dollarsToRubbles->Location = System::Drawing::Point(301, 41);
+            this->dollarsToRubbles->Location = System::Drawing::Point(401, 50);
+            this->dollarsToRubbles->Margin = System::Windows::Forms::Padding(4);
             this->dollarsToRubbles->Name = L"dollarsToRubbles";
-            this->dollarsToRubbles->Size = System::Drawing::Size(113, 17);
+            this->dollarsToRubbles->Size = System::Drawing::Size(140, 20);
             this->dollarsToRubbles->TabIndex = 20;
             this->dollarsToRubbles->TabStop = true;
             this->dollarsToRubbles->Text = L"Доллары в рубли";
@@ -249,9 +258,10 @@ namespace Calc {
             // rubblesToDollars
             // 
             this->rubblesToDollars->AutoSize = true;
-            this->rubblesToDollars->Location = System::Drawing::Point(301, 67);
+            this->rubblesToDollars->Location = System::Drawing::Point(401, 82);
+            this->rubblesToDollars->Margin = System::Windows::Forms::Padding(4);
             this->rubblesToDollars->Name = L"rubblesToDollars";
-            this->rubblesToDollars->Size = System::Drawing::Size(111, 17);
+            this->rubblesToDollars->Size = System::Drawing::Size(140, 20);
             this->rubblesToDollars->TabIndex = 21;
             this->rubblesToDollars->Text = L"Рубли в доллары";
             this->rubblesToDollars->UseVisualStyleBackColor = true;
@@ -261,11 +271,13 @@ namespace Calc {
             // 
             this->rate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->rate->Location = System::Drawing::Point(169, 64);
+            this->rate->Location = System::Drawing::Point(225, 79);
+            this->rate->Margin = System::Windows::Forms::Padding(4);
             this->rate->Name = L"rate";
-            this->rate->Size = System::Drawing::Size(90, 20);
+            this->rate->Size = System::Drawing::Size(119, 23);
             this->rate->TabIndex = 22;
             this->rate->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+            this->rate->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &FFirst::rate_KeyPress);
             this->rate->Leave += gcnew System::EventHandler(this, &FFirst::rate_leave);
             // 
             // lblRate
@@ -273,9 +285,10 @@ namespace Calc {
             this->lblRate->AutoSize = true;
             this->lblRate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblRate->Location = System::Drawing::Point(12, 64);
+            this->lblRate->Location = System::Drawing::Point(16, 79);
+            this->lblRate->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblRate->Name = L"lblRate";
-            this->lblRate->Size = System::Drawing::Size(126, 15);
+            this->lblRate->Size = System::Drawing::Size(156, 18);
             this->lblRate->TabIndex = 23;
             this->lblRate->Text = L"Курс обмена (руб./$):";
             this->lblRate->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -285,9 +298,10 @@ namespace Calc {
             this->lblDirection->AutoSize = true;
             this->lblDirection->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblDirection->Location = System::Drawing::Point(298, 12);
+            this->lblDirection->Location = System::Drawing::Point(397, 15);
+            this->lblDirection->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblDirection->Name = L"lblDirection";
-            this->lblDirection->Size = System::Drawing::Size(166, 13);
+            this->lblDirection->Size = System::Drawing::Size(209, 17);
             this->lblDirection->TabIndex = 24;
             this->lblDirection->Text = L"Направление конвертации";
             this->lblDirection->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -297,9 +311,10 @@ namespace Calc {
             this->lblResult->AutoSize = true;
             this->lblResult->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblResult->Location = System::Drawing::Point(30, 126);
+            this->lblResult->Location = System::Drawing::Point(40, 155);
+            this->lblResult->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblResult->Name = L"lblResult";
-            this->lblResult->Size = System::Drawing::Size(148, 13);
+            this->lblResult->Size = System::Drawing::Size(186, 17);
             this->lblResult->TabIndex = 25;
             this->lblResult->Text = L"Результат конвертации";
             this->lblResult->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -308,10 +323,11 @@ namespace Calc {
             // 
             this->from->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->from->Location = System::Drawing::Point(13, 156);
+            this->from->Location = System::Drawing::Point(17, 192);
+            this->from->Margin = System::Windows::Forms::Padding(4);
             this->from->Name = L"from";
             this->from->ReadOnly = true;
-            this->from->Size = System::Drawing::Size(75, 20);
+            this->from->Size = System::Drawing::Size(99, 23);
             this->from->TabIndex = 26;
             this->from->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -320,9 +336,10 @@ namespace Calc {
             this->lblFrom->AutoSize = true;
             this->lblFrom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblFrom->Location = System::Drawing::Point(94, 157);
+            this->lblFrom->Location = System::Drawing::Point(125, 193);
+            this->lblFrom->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblFrom->Name = L"lblFrom";
-            this->lblFrom->Size = System::Drawing::Size(14, 15);
+            this->lblFrom->Size = System::Drawing::Size(16, 18);
             this->lblFrom->TabIndex = 27;
             this->lblFrom->Text = L"$";
             this->lblFrom->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -332,9 +349,10 @@ namespace Calc {
             this->lblEquals->AutoSize = true;
             this->lblEquals->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblEquals->Location = System::Drawing::Point(138, 156);
+            this->lblEquals->Location = System::Drawing::Point(184, 192);
+            this->lblEquals->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblEquals->Name = L"lblEquals";
-            this->lblEquals->Size = System::Drawing::Size(14, 15);
+            this->lblEquals->Size = System::Drawing::Size(17, 18);
             this->lblEquals->TabIndex = 28;
             this->lblEquals->Text = L"=";
             this->lblEquals->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -343,10 +361,11 @@ namespace Calc {
             // 
             this->to->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->to->Location = System::Drawing::Point(158, 157);
+            this->to->Location = System::Drawing::Point(211, 193);
+            this->to->Margin = System::Windows::Forms::Padding(4);
             this->to->Name = L"to";
             this->to->ReadOnly = true;
-            this->to->Size = System::Drawing::Size(90, 20);
+            this->to->Size = System::Drawing::Size(119, 23);
             this->to->TabIndex = 29;
             this->to->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
             // 
@@ -355,9 +374,10 @@ namespace Calc {
             this->lblTo->AutoSize = true;
             this->lblTo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(204)));
-            this->lblTo->Location = System::Drawing::Point(254, 157);
+            this->lblTo->Location = System::Drawing::Point(339, 193);
+            this->lblTo->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->lblTo->Name = L"lblTo";
-            this->lblTo->Size = System::Drawing::Size(29, 15);
+            this->lblTo->Size = System::Drawing::Size(36, 18);
             this->lblTo->TabIndex = 30;
             this->lblTo->Text = L"руб.";
             this->lblTo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -365,9 +385,10 @@ namespace Calc {
             // eurosToRubbles
             // 
             this->eurosToRubbles->AutoSize = true;
-            this->eurosToRubbles->Location = System::Drawing::Point(301, 90);
+            this->eurosToRubbles->Location = System::Drawing::Point(401, 111);
+            this->eurosToRubbles->Margin = System::Windows::Forms::Padding(4);
             this->eurosToRubbles->Name = L"eurosToRubbles";
-            this->eurosToRubbles->Size = System::Drawing::Size(91, 17);
+            this->eurosToRubbles->Size = System::Drawing::Size(117, 20);
             this->eurosToRubbles->TabIndex = 31;
             this->eurosToRubbles->Text = L"Евро в рубли";
             this->eurosToRubbles->UseVisualStyleBackColor = true;
@@ -376,9 +397,10 @@ namespace Calc {
             // rubblesToEuros
             // 
             this->rubblesToEuros->AutoSize = true;
-            this->rubblesToEuros->Location = System::Drawing::Point(301, 113);
+            this->rubblesToEuros->Location = System::Drawing::Point(401, 139);
+            this->rubblesToEuros->Margin = System::Windows::Forms::Padding(4);
             this->rubblesToEuros->Name = L"rubblesToEuros";
-            this->rubblesToEuros->Size = System::Drawing::Size(91, 17);
+            this->rubblesToEuros->Size = System::Drawing::Size(115, 20);
             this->rubblesToEuros->TabIndex = 32;
             this->rubblesToEuros->Text = L"Рубли в евро";
             this->rubblesToEuros->UseVisualStyleBackColor = true;
@@ -386,9 +408,9 @@ namespace Calc {
             // 
             // FFirst
             // 
-            this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+            this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->ClientSize = System::Drawing::Size(484, 221);
+            this->ClientSize = System::Drawing::Size(645, 272);
             this->Controls->Add(this->rubblesToEuros);
             this->Controls->Add(this->eurosToRubbles);
             this->Controls->Add(this->lblTo);
@@ -410,6 +432,7 @@ namespace Calc {
             this->Controls->Add(this->btnConvert);
             this->Controls->Add(this->btnClose);
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+            this->Margin = System::Windows::Forms::Padding(4);
             this->MaximizeBox = false;
             this->Name = L"FFirst";
             this->Text = L"APM оператора обменного пункта";
@@ -477,20 +500,17 @@ namespace Calc {
         // 107,20
         if (text2->Length < 1) {
             errorMessage = L"Курс обмена не должен быть пустым";
-            this->rate->Text = L"";
             error(errorMessage);
             return false;
         }
         double d;
         if (!Double::TryParse(text1, d)) {
-            errorMessage = L"Сумма должна являться числом";
-            this->sum->Text = L"";
+            errorMessage = L"Ошибка ввода в поле Сумма";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text2, d)) {
-            errorMessage = L"Курс обмена должен являться числом";
-            this->rate->Text = L"";
+            errorMessage = L"Ошибка ввода в поле курс обмена";
             error(errorMessage);
             return false;
         }
@@ -505,7 +525,6 @@ namespace Calc {
         this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
-        ratesCheck();
         return;
     }
     private: System::Void rubblesToDollars_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -514,7 +533,6 @@ namespace Calc {
         this->lblTo->Text = L"$";
         this->from->Text = L"";
         this->to->Text = L"";
-        ratesCheck();
         return;
     }
     private: System::Void eurosToRubbles_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -523,7 +541,6 @@ namespace Calc {
         this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
-        ratesCheck();
         return;
     }
     private: System::Void rubblesToEuros_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -532,11 +549,11 @@ namespace Calc {
         this->lblTo->Text = L"€";
         this->from->Text = L"";
         this->to->Text = L"";
-        ratesCheck();
         return;
     }
     private: System::Void rate_leave(System::Object^ sender, System::EventArgs^ e) {
         setRate();
+        ratesCheck();
         return;
     }
     private: System::Void ratesCheck() {
@@ -555,18 +572,43 @@ namespace Calc {
     }
     private: System::Void setRate() {
         try {
-            if (this->dollarsToRubbles->Checked || this->rubblesToDollars->Checked) {
+            if (this->dollarsToRubbles->Checked) {
                 dollarsToRubblesRate = Convert::ToDouble(this->rate->Text);
-                rubblesToDollarsRate = dollarsToRubblesRate;
             }
-            else if (this->eurosToRubbles->Checked || this->rubblesToEuros->Checked) {
+            else if (this->rubblesToDollars->Checked) {
+                rubblesToDollarsRate = Convert::ToDouble(this->rate->Text);
+            }
+            else if (this->eurosToRubbles->Checked) {
                 eurosToRubblesRate = Convert::ToDouble(this->rate->Text);
-                rubblesToEurosRate = eurosToRubblesRate;
+            }
+            else {
+                rubblesToEurosRate = Convert::ToDouble(this->rate->Text);
             }
         }
         catch (...) {
 
         }
     }
-    };
+    private: System::Void sum_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+
+        if ((e->KeyChar <= 7 ||  e->KeyChar >= 58) && e->KeyChar != '-' && e->KeyChar != 44)
+            e->Handled = true;
+        if (sum->Text->Contains(",") && (e->KeyChar <= 47 ||  e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '-')
+            e->Handled = true;
+        if (sum->Text->Contains("-") && (e->KeyChar <= 47 ||  e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '.' && e->KeyChar != ',')
+            e->Handled = true;
+        if (sum->Text->Contains(".") && (e->KeyChar <= 47 ||  e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '-')
+            e->Handled = true;
+    }
+    private: System::Void rate_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+        if ((e->KeyChar <= 7 || e->KeyChar >= 58) && e->KeyChar != '-' && e->KeyChar != 44)
+            e->Handled = true;
+        if (rate->Text->Contains(",") && (e->KeyChar <= 47 || e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '-')
+            e->Handled = true;
+        if (rate->Text->Contains("-") && (e->KeyChar <= 47 || e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '.' && e->KeyChar != ',')
+            e->Handled = true;
+        if (rate->Text->Contains(".") && (e->KeyChar <= 47 || e->KeyChar >= 58) && e->KeyChar != 8 && e->KeyChar != '-')
+            e->Handled = true;
+    }
+};
 }

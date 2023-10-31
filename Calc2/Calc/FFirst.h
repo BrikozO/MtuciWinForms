@@ -434,38 +434,32 @@ namespace Calc {
         System::String^ errorMessage;
         if (text1->Length < 1) {
             errorMessage = L"Переменная A не должна быть пустой";
-            this->a->Text = L"";
             error(errorMessage);
             return false;
         }
         if (text2->Length < 1) {
             errorMessage = L"Переменная B не должна быть пустой";
-            this->b->Text = L"";
             error(errorMessage);
             return false;
         }
         if (text3->Length < 1) {
             errorMessage = L"Переменная C не должна быть пустой";
-            this->c->Text = L"";
             error(errorMessage);
             return false;
         }
         double d;
         if (!Double::TryParse(text1, d)) {
-            errorMessage = L"Переменная A должно являться числом";
-            this->a->Text = L"";
+            errorMessage = L"Переменная A должна являться числом";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text2, d)) {
-            errorMessage = L"Переменная B должно являться числом";
-            this->b->Text = L"";
+            errorMessage = L"Переменная B должна являться числом";
             error(errorMessage);
             return false;
         }
         if (!Double::TryParse(text3, d)) {
-            errorMessage = L"Переменная C должно являться числом";
-            this->c->Text = L"";
+            errorMessage = L"Переменная C должна являться числом";
             error(errorMessage);
             return false;
         }
