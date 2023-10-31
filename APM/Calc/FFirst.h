@@ -525,6 +525,7 @@ namespace Calc {
         this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
+        ratesCheck();
         return;
     }
     private: System::Void rubblesToDollars_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -533,6 +534,7 @@ namespace Calc {
         this->lblTo->Text = L"$";
         this->from->Text = L"";
         this->to->Text = L"";
+        ratesCheck();
         return;
     }
     private: System::Void eurosToRubbles_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -541,6 +543,7 @@ namespace Calc {
         this->lblTo->Text = L"руб.";
         this->from->Text = L"";
         this->to->Text = L"";
+        ratesCheck();
         return;
     }
     private: System::Void rubblesToEuros_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -549,6 +552,7 @@ namespace Calc {
         this->lblTo->Text = L"И";
         this->from->Text = L"";
         this->to->Text = L"";
+        ratesCheck();
         return;
     }
     private: System::Void rate_leave(System::Object^ sender, System::EventArgs^ e) {
@@ -581,7 +585,7 @@ namespace Calc {
             else if (this->eurosToRubbles->Checked) {
                 eurosToRubblesRate = Convert::ToDouble(this->rate->Text);
             }
-            else {
+            else if (this->rubblesToEuros->Checked) {
                 rubblesToEurosRate = Convert::ToDouble(this->rate->Text);
             }
         }
